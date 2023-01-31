@@ -18,13 +18,8 @@ html {
 body {
   margin: 0 auto;
   padding: 0;
-  width: 100vw;
-  height: 100vh;
   max-width: 600px;
   background-color: white;
-  _display: flex;
-  _justify-content: center;
-  _align-items: center;
 }
 
 .header-container {
@@ -54,7 +49,7 @@ header {
   _top: -1px;
   _right: -1px;
   _width: 100%;
-  padding: 2rem 2.5rem 0.25rem 2.5rem;
+  padding: 1.5rem 2.5rem 0.15rem 2.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -73,14 +68,20 @@ header svg {
 }
 
 main {
-  padding: 2.5rem 4.5rem;
+  padding: 1.5rem 4.5rem;
   _position: absolute;
   _top: 5rem;
 }
 
-h2 {
+main h2 {
   color: var(--heading-color);
   text-transform: uppercase;
+  margin: 0;
+  line-height: 1;
+}
+
+main h3 {
+  color: var(--paragraph-color);
 }
 
 p {
@@ -105,7 +106,7 @@ select {
   padding: 0.5rem 0.75rem;
   border: 2px solid var(--heading-color);
   border-radius: 5px;
-  font-family: "Montserrat";
+  font-family: "Source Sans Pro";
   color: var(--paragraph-color);
 }
 
@@ -124,6 +125,14 @@ input::placeholder {
 
 input#suche {
   grid-column: span 2;
+  font-family: "Montserrat";
+  padding: 0.75rem;
+}
+
+select {
+  font-size: 1em;
+  font-weight: 600;
+  color: var(--heading-color);
 }
 
 ul.student-list {
@@ -135,6 +144,8 @@ ul.student-list {
 ul.student-list li {
   display: flex;
   gap: 1rem;
+  justify-content: flex-start;
+  align-items: center;
   padding: 0.75rem;
   border: 2px solid var(--heading-color);
   box-shadow: 3px 2px 0 var(--heading-color);
@@ -145,12 +156,16 @@ ul.student-list > li {
 }
 
 ul.student-list li a {
+  font-family: "Source Sans Pro";
+  font-size: 1.2rem;
+  font-weight: 600;
   color: var(--heading-color);
   text-decoration: none;
 }
 
 ul.student-list li a span {
-  font-size: 80%;
+  font-size: 0.9rem;
+  font-weight: 400;
   text-decoration: underline;
 }
 
