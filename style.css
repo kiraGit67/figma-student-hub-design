@@ -123,16 +123,50 @@ input::placeholder {
   color: var(--placeholder-font);
 }
 
-input#suche {
+.input-wrapper {
   grid-column: span 2;
+  position: relative;
+}
+
+.input-wrapper > svg {
+  position: absolute;
+  top: 25%;
+  right: 15px;
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: var(--heading-color);
+}
+
+input#suche {
   font-family: "Montserrat";
-  padding: 0.75rem;
 }
 
 select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
   font-size: 1em;
   font-weight: 600;
   color: var(--heading-color);
+}
+
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper::before {
+  font-family: fontello;
+  content: "^";
+  font-size: 20px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 0.475rem;
+  background-color: var(--heading-color);
+  color: #fff;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  transform: rotateX(180deg);
 }
 
 ul.student-list {
